@@ -28,9 +28,9 @@ public class BlockCS extends Block {
 		}
 	}*/
 	
-	/*public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entityplayer) {
-		ModLoader.openGUI(entityplayer, new GUIComponetSeperator());
-	}*/
+	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entityplayer) {
+		ModLoader.openGUI(entityplayer, new GUIComponetSeperator(null));
+	}
 	@Override
 	public String getTextureFile(){
 		return "/gfx/MoreStuff/blocks.png";
