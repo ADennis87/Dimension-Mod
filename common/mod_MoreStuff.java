@@ -1,15 +1,9 @@
 package ninjapancakes87.morestuff.common;
 
-<<<<<<< HEAD
-import net.minecraft.src.Block;
-
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-=======
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
->>>>>>> New and Improved!
+import net.minecraft.src.ModLoader;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,6 +34,7 @@ public class mod_MoreStuff {
 	public static Block CorundumOre;
 	public static Block RedstoneBlock;
 	public static Block ComponetSeperator;
+	public static Block WaterWorldPortal;
 	
 	public static Item Ruby;
 	public static Item Sapphire;
@@ -53,13 +48,13 @@ public class mod_MoreStuff {
 	public static Item GelatinBlob;
 	public static Item Plastic;
 	
+	//public static int CSTop;
+	//public static int CSSide;
 	public static int ZirconBlockID;
 	public static int CorundumBlockID;
-<<<<<<< HEAD
-=======
 	public static int RedstoneBlockID;
 	public static int ComponetSeperatorID;
->>>>>>> New and Improved!
+	public static int WaterWorldPortalID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) 
@@ -70,11 +65,9 @@ public class mod_MoreStuff {
 
 		ZirconBlockID = config.getBlock("ZirconOre", 538).getInt();
 		CorundumBlockID = config.getBlock("CorundumOre", 539).getInt();
-<<<<<<< HEAD
-=======
 		RedstoneBlockID = config.getBlock("RedstoneBlock", 540).getInt();
 		ComponetSeperatorID = config.getBlock("ComponetSeperator", 541).getInt();
->>>>>>> New and Improved!
+		WaterWorldPortalID = config.getBlock("WaterWorldPortal", 542).getInt();
 			
 		config.save();
 	}
@@ -103,11 +96,9 @@ public class mod_MoreStuff {
 	private void InitBlocksAndItems(){
 		ZirconOre = (new BlockZO(ZirconBlockID, 1)).setBlockName("ZO");
 		CorundumOre = (new BlockCO(CorundumBlockID, 0)).setBlockName("CO");
-<<<<<<< HEAD
-=======
 		RedstoneBlock = (new BlockRB(RedstoneBlockID, 16)).setBlockName("RB");
 		ComponetSeperator = (new BlockCS(ComponetSeperatorID, 17)).setBlockName("CS");
->>>>>>> New and Improved!
+		WaterWorldPortal = (new BlockWWP(WaterWorldPortalID, 19)).setBlockName("WWP");
 		
 		Ruby = (new ItemDefault(900)).setIconIndex(0).setItemName("UnreadableRuby");
 		Sapphire = (new ItemDefault(901)).setIconIndex(1).setItemName("UnreadableSapphire");
@@ -126,6 +117,7 @@ public class mod_MoreStuff {
 		LanguageRegistry.addName(CorundumOre, "Corundum Ore");
 		LanguageRegistry.addName(RedstoneBlock, "Redstone Block");
 		LanguageRegistry.addName(ComponetSeperator, "Componet Seperator");
+		LanguageRegistry.addName(WaterWorldPortal, "Portal");
 		
 		LanguageRegistry.addName(Ruby, "Ruby");
 		LanguageRegistry.addName(Sapphire, "Sapphire");
@@ -166,9 +158,10 @@ public class mod_MoreStuff {
 		GameRegistry.registerBlock(RedstoneBlock);
 		GameRegistry.registerBlock(ComponetSeperator);
 		
-		DungeonHooks.addDungeonLoot(new ItemStack(Corundum), 100, 1, 3);
+		DungeonHooks.addDungeonLoot(new ItemStack(Corundum), 1, 1, 3);
 		
 		GameRegistry.registerWorldGenerator(new WorldgeneratorOres());
+		
 	}
 	
 }

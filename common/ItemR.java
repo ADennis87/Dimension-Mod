@@ -1,7 +1,7 @@
 package ninjapancakes87.morestuff.common;
 
-import net.minecraft.src.CreativeTabs;
-import net.minecraft.src.Item;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 public class ItemR extends Item{
 	

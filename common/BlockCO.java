@@ -3,7 +3,6 @@ package ninjapancakes87.morestuff.common;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.src.*;
 
 public class BlockCO extends Block {
 	

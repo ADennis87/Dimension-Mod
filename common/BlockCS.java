@@ -20,9 +20,17 @@ public class BlockCS extends Block {
 		
 		this.setStepSound(this.soundMetalFootstep);
 	}
-	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entityplayer) {
+	
+	/*public int GetBlockTextureFromSideAndMetadata (int i, int j){
+		switch(i){
+		case 1: mod_MoreStuff.CSTop;
+		defualt: mod_MoreStuff.CSSide;
+		}
+	}*/
+	
+	/*public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entityplayer) {
 		ModLoader.openGUI(entityplayer, new GUIComponetSeperator());
-	}
+	}*/
 	@Override
 	public String getTextureFile(){
 		return "/gfx/MoreStuff/blocks.png";
